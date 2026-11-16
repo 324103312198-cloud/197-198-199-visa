@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>197,198,199 Visa – Global Visa Approval Prediction</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f8fb;--card:#fff;--ink:#0f2240;--mut:#5b6b82;--line:#dbe3ec;--navy:#0a1628;--navy2:#16325c;--teal:#14b8a6;--tealD:#0d9488;--err:#dc2626;--warn:#b45309;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08111f;--card:#0f1d33;--ink:#e6edf7;--mut:#93a4bd;--line:#223350;--navy:#050c18;--tealD:#2dd4bf;--err:#f87171;--warn:#fbbf24;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#08111f;--card:#0f1d33;--ink:#e6edf7;--mut:#93a4bd;--line:#223350;--navy:#050c18;--tealD:#2dd4bf;--err:#f87171;--warn:#fbbf24;color-scheme:dark}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Plus Jakarta Sans",system-ui,sans-serif;min-height:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navy);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);color:#fff}
+.bar{max-width:960px;margin:auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.logo{font-weight:800;font-size:18px;color:#fff;text-decoration:none}.logo b{color:var(--teal)}
+nav{display:flex;gap:2px;overflow-x:auto}
+nav a{color:#b8c6dc;text-decoration:none;padding:8px 10px;border-radius:8px;font-size:14px;white-space:nowrap}
+nav a.on{background:rgba(255,255,255,.12);color:#5eead4}
+main{max-width:960px;margin:auto;padding:20px 16px 40px}
+.hero{background:linear-gradient(140deg,var(--navy),var(--navy2));color:#fff;border-radius:20px;padding:34px 22px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,.45),transparent 70%);animation:fl 7s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(18px)}}
+@media(prefers-reduced-motion:reduce){.hero::after{animation:none}*{transition:none!important}}
+h1{font-size:clamp(26px,6vw,40px);line-height:1.15;margin:0 0 12px;font-weight:800;letter-spacing:-.02em}
+h2{font-size:21px;margin:28px 0 10px;font-weight:800}h3{margin:0 0 6px;font-size:16px}
+p{margin:0 0 10px}.mut{color:var(--mut);font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:13px 20px;font:600 16px inherit;font-family:inherit;cursor:pointer;text-decoration:none;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.98)}
+.pri{background:var(--teal);color:#042a26}.pri:hover{background:#2dd4bf}
+.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:14px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.cat{padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--card);font-size:14px;font-weight:600}
+.cat small{display:block;color:var(--mut);font-weight:400;margin-top:2px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.stats div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px}
+.stats b{display:block;font-size:26px;color:#5eead4}.stats span{font-size:13px;color:#c5d1e4}
+label{display:block;font-weight:600;font-size:14px;margin:0 0 14px}
+select{width:100%;margin-top:6px;padding:13px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font:16px inherit;font-family:inherit}
+select:focus,.btn:focus-visible,a:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.bad select{border-color:var(--err)}.er{color:var(--err);font-size:13px;font-weight:500;margin-top:4px;display:none}.bad .er{display:block}
+.steps{display:flex;gap:6px;margin:6px 0 18px}.steps i{flex:1;height:6px;border-radius:3px;background:var(--line)}.steps i.d{background:var(--teal)}.steps i.c{background:var(--navy2)}
+.row{display:flex;justify-content:space-between;gap:10px;margin-top:10px}
+.bn{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--warn);border-radius:14px;padding:18px}
+.bar-r{display:flex;align-items:center;gap:8px;font-size:13px;margin:6px 0}.bar-r span:first-child{width:110px;flex:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-r i{height:10px;border-radius:5px;background:var(--teal);display:block;transition:width .6s}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:8px 6px;border-top:1px solid var(--line)}th{color:var(--mut);font-weight:500;border:0}
+.tbl{overflow-x:auto}
+footer{background:var(--navy);color:#9fb0c9;font-size:13px;padding:22px 16px calc(22px + env(safe-area-inset-bottom,0px))}
+footer p{max-width:960px;margin:0 auto 6px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px;background:rgba(20,184,166,.15);color:var(--tealD)}
+</style>
+</head>
+<body>
+<header><div class="bar"><a class="logo" href="#home">197,198,199 <b>Visa</b></a>
+<nav><a href="#home" data-r="home">Home</a><a href="#predict" data-r="predict">Predict</a><a href="#dashboard" data-r="dashboard">Dashboard</a><a href="#about" data-r="about">About</a></nav></div></header>
+<main id="app" aria-live="polite"></main>
+<footer><p>Decision-support tool only. Predictions are estimates, and only the relevant immigration authority can decide a visa application.</p>
+<p>Privacy: your answers stay in this browser. Nothing is sent to a server, and no name, passport or contact details are asked for.</p></footer>
+<script>
+"use strict";
+/* ---------- Data ---------- */
+var COUNTRIES="Argentina,Australia,Austria,Bangladesh,Belgium,Brazil,Canada,Chile,China,Colombia,Czech Republic,Denmark,Egypt,Finland,France,Germany,Ghana,Greece,Hong Kong,Hungary,Iceland,India,Indonesia,Ireland,Israel,Italy,Japan,Kenya,Luxembourg,Malaysia,Mexico,Nepal,Netherlands,New Zealand,Nigeria,Norway,Pakistan,Philippines,Poland,Portugal,Qatar,Russia,Saudi Arabia,Singapore,South Africa,South Korea,Spain,Sri Lanka,Sweden,Switzerland,Thailand,Turkey,United Arab Emirates,United Kingdom,United States,Vietnam".split(",");
+var CATS=[["student","Student Visa",["Undergraduate","Postgraduate","Doctoral / research","Language course","Vocational"]],
+["tourist","Tourist / Visitor Visa",["Leisure","Visiting friends or family","Short-term event"]],
+["work","Work Visa",["Skilled worker","Intra-company transfer","Seasonal / temporary","Self-employed"]],
+["business","Business Visa",["Meetings / conference","Trade / investment"]],
+["family","Family / Dependent Visa",["Spouse / partner","Child","Parent / other relative"]],
+["permanent_residency","Permanent Residency Visa",["Employment-based","Family-based","Points-based","Investment"]],
+["transit","Transit Visa",["Airport transit","Short stopover"]],
+["medical","Medical Visa",["Treatment","Accompanying patient"]],
+["exchange","Exchange Visitor Visa",["Student exchange","Researcher / scholar","Au pair / trainee"]],
+["other","Other Visa Categories",["Other"]]];
+var YN=["Yes","No"];
+/* [key,label,step,options,required,categories|null] */
+var F=[
+["age","Age range",2,["18–24","25–34","35–44","45–54","55+"],1],
+["edu","Highest education",2,["Secondary","Diploma","Bachelor","Master","Doctorate"],1],
+["emp","Employment status",2,["Employed","Self-employed","Student","Unemployed","Retired"],1],
+["occ","Occupation group",2,["Engineering / IT","Healthcare","Education / research","Business / finance","Trades / technical","Arts / media","Other"],0],
+["exp","Years of work experience",2,["0","1–2","3–5","6–10","10+"],1],
+["trav","Previous international travel",2,["None","1–3 countries","4+ countries"],1],
+["inc","Annual income (USD equivalent)",3,["Under 10k","10–25k","25–50k","50–100k","100k+"],1],
+["fund","Available funds (USD equivalent)",3,["Under 5k","5–15k","15–50k","50k+"],1],
+["spon","Sponsorship status",3,["Self-funded","Family","Employer","Institution / scholarship","Government"],1],
+["fdoc","Financial documents available",3,["Complete","Partial","None"],1],
+["pap","Previous visa applications (any country)",4,["None","1–2","3+"],1],
+["ref","Ever refused a visa",4,YN,1],
+["sdoc","Supporting documents ready",4,["Complete","Partial","Minimal"],1],
+["adm","Admission status",4,["Unconditional offer","Conditional offer","Applied","None"],1,["student","exchange"]],
+["job","Job offer secured",4,YN,1,["work"]],
+["spn","Employer is an approved sponsor",4,["Yes","No","Unsure"],0,["work"]],
+["inv","Invitation letter from host",4,YN,1,["business","tourist"]],
+["rel","Relationship to sponsor",4,["Spouse","Child","Parent","Other"],1,["family"]],
+["pre","Evidence for chosen residency pathway",4,["Complete","Partial","None"],1,["permanent_residency"]],
+["hos","Hospital acceptance letter",4,YN,1,["medical"]],
+["ont","Onward ticket or visa for next country",4,YN,1,["transit"]],
+["psp","Designated program sponsor",4,YN,1,["exchange"]]];
+/* Registry of validated models. Empty = no country/category has a trained model, so no prediction is ever produced. */
+var MODELS=[];
+var UNAVAIL="Prediction unavailable: Insufficient validated historical data for this country and visa category.";
+var STEPS=["Destination","Applicant","Financial","Application"];
+
+/* ---------- State & storage ---------- */
+var st={step:1,v:{},errs:{},last:null};
+function load(){try{return JSON.parse(localStorage.getItem("vp_hist")||"[]")}catch(e){return[]}}
+function save(a){try{localStorage.setItem("vp_hist",JSON.stringify(a.slice(0,200)))}catch(e){}}
+var $=function(s){return document.querySelector(s)};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function catName(s){var c=CATS.filter(function(x){return x[0]===s})[0];return c?c[1]:s}
+
+/* ---------- Views ---------- */
+function home(){
+ var cov=MODELS.length;
+ return '<section class="hero"><h1>Global visa approval prediction using machine learning</h1>'+
+ '<p style="color:#c5d1e4;max-width:52ch">Check your profile against a validated model for your destination and visa type. Where no validated model exists, we tell you plainly instead of guessing.</p>'+
+ '<a class="btn pri" href="#predict">Predict my visa approval</a>'+
+ '<div class="stats"><div><b>'+COUNTRIES.length+'</b><span>Destinations listed</span></div><div><b>'+CATS.length+'</b><span>Visa categories</span></div><div><b>'+cov+'</b><span>Validated models live</span></div><div><b>0</b><span>Invented predictions</span></div></div></section>'+
+ '<h2>How it works</h2><div class="grid"><div class="card"><h3>Answer a short form</h3><p class="mut">Only questions relevant to your visa type. No protected characteristics.</p></div>'+
+ '<div class="card"><h3>Model check</h3><p class="mut">A prediction appears only when a trained, tested and calibrated model exists for your pair.</p></div>'+
+ '<div class="card"><h3>Clear result</h3><p class="mut">See the outcome, probability, influencing factors and model evaluation.</p></div></div>'+
+ '<h2>Visa categories</h2><div class="grid">'+CATS.map(function(c){var n=MODELS.filter(function(m){return m.category===c[0]}).length;return '<div class="cat">'+c[1]+'<small>'+(n?n+" model(s) live":"Awaiting validated data")+'</small></div>'}).join("")+'</div>'+
+ '<div class="card" style="margin-top:14px"><h3>Current status</h3><p class="mut" style="margin:0">The form, results and dashboard work. No historical visa dataset has been validated yet, so every prediction currently returns “unavailable”. Real applicant-level outcome data is needed before any estimate can be honest.</p></div>';
+}
+function field(f){
+ var val=st.v[f[0]]||"",bad=st.errs[f[0]];
+ return '<label class="'+(bad?"bad":"")+'">'+esc(f[1])+(f[4]?" *":"")+'<select data-k="'+f[0]+'"><option value="">Select…</option>'+
+ f[3].map(function(o){return '<option'+(o===val?" selected":"")+'>'+esc(o)+'</option>'})
+ .join("")+'</select><div class="er">'+(bad||"")+'</div></label>';
+}
+function opt(list,val,label){return '<option value="">Select…</option>'+list.map(function(o){var v=Array.isArray(o)?o[0]:o,l=Array.isArray(o)?o[1]:o;return '<option value="'+esc(v)+'"'+(v===val?" selected":"")+'>'+esc(l)+'</option>'}).join("")}
+function sel(k,label,list,req){var bad=st.errs[k];return '<label class="'+(bad?"bad":"")+'">'+label+(req?" *":"")+'<select data-k="'+k+'">'+opt(list,st.v[k]||"")+'</select><div class="er">'+(bad||"")+'</div></label>'}
+function predict(){
+ var s=st.step,h='<h1 style="font-size:28px">Visa prediction</h1><div class="steps">'+STEPS.map(function(_,i){return '<i class="'+(s>i+1?"d":s===i+1?"c":"")+'"></i>'}).join("")+'</div><p class="mut">Step '+s+" of 4: "+STEPS[s-1]+'</p><div class="card">';
+ if(s===1){
+  var c=CATS.filter(function(x){return x[0]===st.v.cat})[0];
+  h+=sel("dest","Destination country",COUNTRIES,1)+sel("cat","Visa category",CATS.map(function(x){return[x[0],x[1]]}),1)+
+   (c?sel("sub","Visa subtype",c[2],0):"")+sel("cit","Country of citizenship",COUNTRIES,1)+sel("res","Country of residence",COUNTRIES,1);
+ }else{
+  F.filter(function(f){return f[2]===s&&(!f[5]||f[5].indexOf(st.v.cat)>-1)}).forEach(function(f){h+=field(f)});
+ }
+ h+='<div class="row"><button class="btn ghost" id="back"'+(s===1?" disabled":"")+'>Back</button><button class="btn pri" id="next">'+(s<4?"Next":"Get prediction")+'</button></div></div>'+
+ '<p class="mut">We never ask for your name, passport number, religion, race, ethnicity or gender.</p>';
+ return h;
+}
+function validate(){
+ var e={},s=st.step,v=st.v;
+ if(s===1){["dest","cat","cit","res"].forEach(function(k){if(!v[k])e[k]="Select an option to continue"})}
+ else F.filter(function(f){return f[2]===s&&f[4]&&(!f[5]||f[5].indexOf(v.cat)>-1)&&!v[f[0]]}).forEach(function(f){e[f[0]]="Select an option to continue"});
+ st.errs=e;return Object.keys(e).length===0;
+}
+function result(){
+ var r=st.last;if(!r)return '<div class="card"><p>No result yet.</p><a class="btn pri" href="#predict">Start a prediction</a></div>';
+ var m=MODELS.filter(function(x){return x.country===r.dest&&x.category===r.cat})[0];
+ return '<h1 style="font-size:28px">Prediction result</h1><div class="bn"><span class="tag">Prediction unavailable</span><h3 style="margin-top:10px">'+esc(r.dest)+" · "+esc(catName(r.cat))+'</h3>'+
+ '<p style="font-weight:600">'+UNAVAIL+'</p><p class="mut" style="margin:0">No probability, approval percentage or risk factors are shown because no validated model exists for this combination. Showing a number here would be a guess.</p></div>'+
+ '<div class="card"><h3>Model information</h3><p class="mut" style="margin:0">'+(m?"":"No model trained. Dataset coverage: none. Evaluation: not applicable.")+'</p></div>'+
+ '<div class="card"><h3>What you can do next</h3><p class="mut" style="margin:0">Check the official immigration authority’s requirements for '+esc(r.dest)+', confirm your supporting documents are complete, and consider a licensed immigration adviser. This result was saved to your dashboard history.</p></div>'+
+ '<a class="btn pri" href="#predict">Start another prediction</a>';
+}
+function dash(){
+ var h=load(),n=h.length;
+ var out='<h1 style="font-size:28px">Dashboard</h1><p class="mut">Calculated from predictions made in this browser. No sample data is shown.</p>';
+ if(!n)return out+'<div class="card"><p>No predictions yet.</p><a class="btn pri" href="#predict">Run a prediction</a></div>';
+ function grp(k,f){var o={};h.forEach(function(x){var a=f?f(x[k]):x[k];o[a]=(o[a]||0)+1});return Object.keys(o).map(function(a){return[a,o[a]]}).sort(function(a,b){return b[1]-a[1]})}
+ function bars(a){var mx=a[0][1];return a.slice(0,8).map(function(x){return '<div class="bar-r"><span>'+esc(x[0])+'</span><i style="width:'+Math.round(x[1]/mx*100)+'%"></i><span style="width:24px;text-align:right">'+x[1]+'</span></div>'}).join("")}
+ out+='<div class="grid"><div class="card"><div class="mut">Total predictions</div><div style="font-size:34px;font-weight:800">'+n+'</div></div><div class="card"><div class="mut">Approval likely</div><div style="font-size:34px;font-weight:800">0</div></div><div class="card"><div class="mut">Unavailable</div><div style="font-size:34px;font-weight:800">'+n+'</div></div></div>'+
+ '<div class="card"><h3>By visa category</h3>'+bars(grp("cat",catName))+'</div><div class="card"><h3>By destination</h3>'+bars(grp("dest"))+'</div>'+
+ '<div class="card tbl"><h3>Recent predictions</h3><table><tr><th>When</th><th>Destination</th><th>Category</th><th>Outcome</th></tr>'+
+ h.slice(0,10).map(function(x){return '<tr><td>'+new Date(x.t).toLocaleDateString()+'</td><td>'+esc(x.dest)+'</td><td>'+esc(catName(x.cat))+'</td><td>Unavailable</td></tr>'}).join("")+'</table></div>'+
+ '<button class="btn ghost" id="clr">Clear history</button>';
+ return out;
+}
+function about(){
+ function S(t,b){return '<div class="card"><h3>'+t+'</h3><p class="mut" style="margin:0">'+b+'</p></div>'}
+ return '<h1 style="font-size:28px">About the project</h1>'+
+ S("Objective","Help applicants understand how their profile compares with historical outcomes for a destination and visa category, as decision support only.")+
+ S("Machine learning methodology","For each country and category with enough real data, Logistic Regression, Decision Tree, Random Forest and XGBoost are compared with cross-validation, scored on ROC-AUC and calibration as well as accuracy, then tested once on held-out data. SHAP explains each prediction. This web page contains the interface; model training runs in Python (see the full project files).")+
+ S("Technologies","This page: HTML, CSS and JavaScript. Full project: React, FastAPI, scikit-learn, XGBoost, SHAP, SQLite.")+
+ S("Dataset methodology","Only real, legally usable data, recorded with source, licence and label meaning. Labour certification, petition approval and visa issuance are kept separate. Below minimum size or class balance, no model is trained.")+
+ S("Limitations","Applicant-level visa decisions are rarely public. Models reflect past data and cannot capture policy changes, officer discretion or document quality. This page cannot train or run models itself, so it currently reports “unavailable”.")+
+ S("Ethical considerations","Religion, race, ethnicity and gender are neither collected nor used. Citizenship and residence are asked because visa rules depend on them. Answers stay in your browser.");
+}
+
+/* ---------- Router ---------- */
+function render(){
+ var r=(location.hash||"#home").slice(1);
+ if(["home","predict","result","dashboard","about"].indexOf(r)<0)r="home";
+ document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.dataset.r===(r==="result"?"predict":r))});
+ $("#app").innerHTML={home:home,predict:predict,result:result,dashboard:dash,about:about}[r]();
+ window.scrollTo(0,0);
+}
+document.addEventListener("change",function(e){var k=e.target.dataset&&e.target.dataset.k;if(!k)return;
+ st.v[k]=e.target.value;delete st.errs[k];
+ if(k==="cat"){delete st.v.sub;for(var x in st.v)if(["dest","cat","cit","res"].indexOf(x)<0)delete st.v[x];render()}
+ else e.target.closest("label").classList.remove("bad")});
+document.addEventListener("click",function(e){var id=e.target.id;
+ if(id==="next"){if(!validate()){render();return}
+  if(st.step<4){st.step++;render()}else{
+   var rec={t:Date.now(),dest:st.v.dest,cat:st.v.cat};var h=load();h.unshift(rec);save(h);
+   st.last={dest:st.v.dest,cat:st.v.cat};st={step:1,v:{},errs:{},last:st.last};location.hash="#result";render()}}
+ if(id==="back"&&st.step>1){st.step--;st.errs={};render()}
+ if(id==="clr"){save([]);render()}});
+window.addEventListener("hashchange",render);render();
+</script>
+</body>
+</html>
